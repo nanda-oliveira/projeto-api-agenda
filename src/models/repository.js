@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const DB_URL = "mongodb://localhost:27017/Contatos"
+const DB_URL = "mongodb://localhost:27017/Contatinhos"
 
 const connect = ()=>{
     mongoose.connect(DB_URL,{useNewUrlParser: true})

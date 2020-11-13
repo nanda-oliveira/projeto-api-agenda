@@ -1,5 +1,6 @@
 const { response } = require("express")
 const { request } = require("../app")
+const contatoCollections = require("../models/contatoSchema")
 const contatoCollection = require("../models/contatoSchema")
 
 
@@ -18,6 +19,32 @@ const getAll = (req, res)=>{
     )
 }
 
+const getByName = (req, res)=>{
+    const name = req.params.name
+    contatoCollections.find(name, (error, contatos)=>{
+        if(error){
+            return res.status(500).send(error)
+        }else{
+            return res.status(200).send(contatos)
+        }
+
+    })
+
+}
+
+const getById = (req, res)=>{
+        const idParam = req.params.id
+        contatoCollections.find(idParam, (error, contatos)=>{
+            if(error){
+                return res.status(500).send(error)
+            }else{
+                return res.status(200).send(contatos)
+            }
+        }
+        )
+       
+
+}
 
 const addContato = (req, res)=>{
     const contatoDoBody = req.body // pegando o body que o usuario digitou
@@ -41,5 +68,7 @@ const addContato = (req, res)=>{
 
 module.exports = {
     getAll,
+    getByName,
+    getById,
     addContato
 }
