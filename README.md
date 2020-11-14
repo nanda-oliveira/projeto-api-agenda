@@ -26,6 +26,6 @@ Essa API deve ter as seguintes rotas:
 [ ] "/contatos/nome/[NOME]" Retorna contato por nome específico [ get]ok
 [ ] "/contatos/id/[ID]" Retorna contato por id específico [ get]ok
 [ ] "/contatos/criar" Cria novo contato e retorna mensagem amigável [ put] ok
-[ ] "/contatos/deletar/[ID]" Deleta contato por id específico e retorna mensagem amigável [delete]
+[ ] "/contatos/deletar/[ID]" Deleta contato por id específico e retorna mensagem amigável [delete] ok
 [ ] "/contatos/atualizar/telefone/[ID]" Atualiza somente telefone do contato por id específico e retorna mensagem amigável
 [ ] "/contatos/atualizar/[ID]" Atualiza completamente contato e retorna mensagem amigável (id não pode ser modificado)
